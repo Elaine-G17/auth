@@ -11,9 +11,11 @@
 
   <body>
      <!-- if user logged in-->
+  <p>
      <% if @current_user %>
       Hey, <%= @current_user["first_name"]%>
-      <a href="/sessions/new">Logout</a>
+      <a href="/logout">Logout</a>
+  </p>
     <% else %>
      <!-- else -->
     <p>
@@ -27,5 +29,6 @@
     </p>
 
     <%= yield %>
+
   </body>
 </html>
